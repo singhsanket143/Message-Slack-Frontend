@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
+
+    const navigate = useNavigate()
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
@@ -52,6 +55,9 @@ const SignUp = () => {
           Sign Up
         </Button>
       </Form>
+      <div className="text-center">
+        <p className="text-blue-800 text-sm my-2">Already have an account ? <span onClick={()=>navigate('/signin')}  className="text-blue-600 cursor-pointer">sign in</span></p>
+    </div>
     </div>
   </div>
   );
