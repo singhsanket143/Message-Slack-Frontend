@@ -1,22 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  content: [
-  './index.html',
-  './src/**/*.{js,ts,jsx,tsx}'
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-=======
-    darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
-=======
     darkMode: ['class'],
     content: ['./index.html', './src/**/*.{ts,tsx,js,jsx}'],
->>>>>>> 1c4e92c0f947f9d286c7897a832af5638b34bd86
   theme: {
   	extend: {
   		borderRadius: {
@@ -68,13 +53,6 @@ export default {
   		}
   	}
   },
-<<<<<<< HEAD
-  plugins: [require("tailwindcss-animate")],
->>>>>>> 8de2287527f8d9337709b3b952bd8dc281008869
-}
-=======
   // eslint-disable-next-line no-undef
   plugins: [require('tailwindcss-animate')],
 };
->>>>>>> 1c4e92c0f947f9d286c7897a832af5638b34bd86
-
