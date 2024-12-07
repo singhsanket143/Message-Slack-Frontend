@@ -14,8 +14,8 @@ const queryClient = new QueryClient();
     <QueryClientProvider client={queryClient}>
       <AppContextProvider>
         <AppRoutes />
-        <Toaster />
       </AppContextProvider>
+      <Toaster />
     </QueryClientProvider>
   );
 }
