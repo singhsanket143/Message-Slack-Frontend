@@ -1,6 +1,7 @@
 import { ChevronDownIcon, ListFilterIcon, SquarePenIcon } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
+import { WorkspaceInviteModal } from '@/components/organisms/Modals/WorkspaceInviteModal';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { useAuth } from '@/hooks/context/useAuth';
@@ -10,6 +11,8 @@ import { useWorkspacePreferencesModal } from '@/hooks/context/useWorkspacePrefer
 export const WorkspacePanelHeader = ({ workspace }) => {
 
     console.log('workspace is', workspace);
+
+    const [openInviteModal, setOpenInviteModal] = useState(false);
 
     const { setWorkspace } = useWorkspacePreferencesModal();
 
@@ -31,6 +34,15 @@ export const WorkspacePanelHeader = ({ workspace }) => {
     }, []);
 
     return (
+        <>
+            <WorkspaceInviteModal 
+                openInviteModal={openInviteModal}
+                setOpenInviteModal={setOpenInviteModal}
+                workspaceName={workspace?.name}
+                joinCode={workspace?.joinCode}
+
+            />
+        
         <div
             className='flex items-center justify-between px-4 h-[50px] gap-0.5'
         >
@@ -78,6 +90,7 @@ export const WorkspacePanelHeader = ({ workspace }) => {
                             <DropdownMenuSeparator />
                             <DropdownMenuItem
                                 className='cursor-pointer py-2'
+                                onClick={() => {setOpenInviteModal(true);}}
                             >
                                 Invite people to {workspace?.name}
                             </DropdownMenuItem>
@@ -105,5 +118,6 @@ export const WorkspacePanelHeader = ({ workspace }) => {
                 </Button>
             </div>
         </div>
+        </>
     );
 };
