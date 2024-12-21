@@ -51,7 +51,7 @@ export const WorkspaceInviteModal = ({ openInviteModal, setOpenInviteModal, work
                         {joinCode}
                     </p>
                     <Button size="sm" variant="ghost" onClick={handleCopy}>
-                        Copy Link
+                        Copy Code
                         <CopyIcon className='size-4 ml-2' />
                     </Button>
 
