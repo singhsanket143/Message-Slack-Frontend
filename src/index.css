@@ -64,3 +64,49 @@
     @apply bg-background text-foreground;
   }
 }
+
+.ql-toolbar {
+  border: none !important;
+  background-color: #f8f8f8 !important;
+}
+
+.ql-toolbar .ql-formats:not(:last-child) {
+  border-right: 1px solid #dcdcdc !important;
+  padding-right: 12px !important;
+}
+
+.ql-container {
+  border: none !important;
+  height: unset !important; /* automatically adjust w.r.t content */
+  font-family: 'Lato', sans-serif !important;
+}
+
+.ql-editor {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  padding: 8px 12px !important;
+  color: #1d1d1d !important;
+  font-weight: 400 !important;
+}
+
+.ql-editor a:hover {
+  text-decoration: underline !important;
+}
+
+.ql-editor a {
+  color: #1264a3 !important;
+}
+
+.ql-renderer {
+  padding: 0 !important;
+}
+
+.ql-editor:before {
+  left: 12px !important;
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  color: #8d8d8d !important;
+  @apply truncate;
+}
