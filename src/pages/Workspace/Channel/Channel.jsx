@@ -33,7 +33,8 @@ export const Channel = () => {
     return (
         <div className='flex flex-col h-full'>
             <ChannelHeader name={channelDetails?.name} />
-            <div className='flex-1' />
+            
+            <div className='flex-1' /> 
             <ChatInput />
         </div>
     );

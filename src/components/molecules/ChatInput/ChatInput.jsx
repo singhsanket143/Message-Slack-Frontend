@@ -2,6 +2,7 @@ import { Editor } from '@/components/atoms/Editor/Edtior';
 
 export const ChatInput = () => {
 
+
     async function handleSubmit({ body }) {
         console.log(body);
     }
@@ -18,6 +19,8 @@ export const ChatInput = () => {
                 defaultValue=""
                 
             />
+
+            
         </div>
     );
 };
