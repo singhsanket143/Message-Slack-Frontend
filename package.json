@@ -30,6 +30,7 @@
     "react-resizable-panels": "^2.1.7",
     "react-router-dom": "^7.0.1",
     "react-verification-input": "^4.2.0",
+    "socket.io-client": "^4.8.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
